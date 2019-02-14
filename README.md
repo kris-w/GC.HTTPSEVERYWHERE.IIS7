@@ -12,17 +12,17 @@ I followed a guide from [DigiCert](https://knowledge.digicert.com/solution/SO143
 *Note: Sites that use a self signed certificate will rightfully throw all kinds of red flags and warnings if you try to access them via HTTPS with any modern browser.*
 
 ## 3. Install the URL Rewrite module for IIS7
-I downloaded the module from the Microsoft's [URL Rewrite Module 2.0 for IIS 7] (https://www.microsoft.com/en-us/download/details.aspx?id=7435) page, ran the MSI installation package.
+I downloaded the module from the Microsoft's [URL Rewrite Module 2.0 for IIS 7](https://www.microsoft.com/en-us/download/details.aspx?id=7435) page, ran the MSI installation package.
 
 ## 4. Redirect all HTTP requests to HTTPS
 The sample web.config file contains entries to handle the redirect configuration. Merge the contents of this with your own web.config file.
 
-If you would prefer the point and click approach, you can follow the guide from Namecheap on [Implementing redirects from HTTP to HTTPS in IIS] (https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https).
+If you would prefer the point and click approach, you can follow the guide from Namecheap on [Implementing redirects from HTTP to HTTPS in IIS](https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https).
 
 ## 5. Enable HSTS
 Again, the entries in the sample web.config file already takes care of this. *Reminder: merge the contents of this with your own web.config file, do not simply overwrite your own.*
 
-However, if you'd rather click through the Windows interface, TBS Certificates (no, not that TBS) provides a nice writeup on how to [Configure HSTS on IIS 7/8] (https://www.tbs-certificates.co.uk/FAQ/en/hsts-iis.html)
+However, if you'd rather click through the Windows interface, TBS Certificates (no, not that TBS) provides a nice writeup on how to [Configure HSTS on IIS 7/8](https://www.tbs-certificates.co.uk/FAQ/en/hsts-iis.html)
 
 ## 6. Enable TLS 1.2
 The sample powershell script takes care of this for you. 
