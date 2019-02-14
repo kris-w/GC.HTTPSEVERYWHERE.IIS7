@@ -15,16 +15,19 @@ I followed a guide from [DigiCert](https://knowledge.digicert.com/solution/SO143
 I downloaded the module from the Microsoft's [URL Rewrite Module 2.0 for IIS 7] (https://www.microsoft.com/en-us/download/details.aspx?id=7435) page, ran the MSI installation package.
 
 ## 4. Redirect all HTTP requests to HTTPS
-I have also included a sample web.config file containing entries to handle the redirects. Merge the contents of this with your own web.config file.
+The sample web.config file contains entries to handle the redirect configuration. Merge the contents of this with your own web.config file.
 
 If you would prefer the point and click approach, you can follow the guide from Namecheap on [Implementing redirects from HTTP to HTTPS in IIS] (https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https).
 
 ## 5. Enable HSTS
-Again, our sample web.config file already takes care of this!
+Again, the entries in the sample web.config file already takes care of this. *Reminder: merge the contents of this with your own web.config file, do not simply overwrite your own.*
+
 However, if you'd rather click through the Windows interface, TBS Certificates (no, not that TBS) provides a nice writeup on how to [Configure HSTS on IIS 7/8] (https://www.tbs-certificates.co.uk/FAQ/en/hsts-iis.html)
 
 ## 6. Enable TLS 1.2
-The sample powershell script takes care of this for you. If you would rather apply this change manually in the registry, see the [How to enable TLS 1.2 on Windows Server 2008 R2](https://support.quovadisglobal.com/kb/a433/how-to-enable-tls-1_2-on-windows-server-2008-r2.aspx) by QuoVadis Global. 
+The sample powershell script takes care of this for you. 
+
+If you would rather apply this change manually in the registry, see the [How to enable TLS 1.2 on Windows Server 2008 R2](https://support.quovadisglobal.com/kb/a433/how-to-enable-tls-1_2-on-windows-server-2008-r2.aspx) by QuoVadis Global. 
 
 ## 7. Disable Older Versions of SSL, TLS, and weak ciphers
 Once again, the sample powershell script can do all of this for you. It already contains calls to set registry values to disable old versions of SSL, TLS, and some known weak ciphers. However, check in with your departmental technical security teams to determine if any additional entries are required, and be sure to test using the HTTPS diagnostic tool of your choice!
