@@ -1,6 +1,6 @@
 # GC.HTTPSEveryWhere.IIS7
 
-**__ This guide and code are depricated - do not use! Check the TBS ITPIN for the latest requirements! __**
+## ** __ This guide and code are depricated - do not use! Check the TBS ITPIN for the latest requirements! __ ** ##
 
 How the heck do we comply with the [TBS ITPIN on Implementing HTTPS for Secure Web Connections](https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/policy-implementation-notices/implementing-https-secure-web-connections-itpin.html) on a legacy server running IIS7?
 
